@@ -9,7 +9,7 @@ const Login = () => {
   return (
     <div className="container card authcard center-align">
       <h1>Login</h1>
-      <form></form>
+      <form>
       <input
         type="text"
         placeholder="email"
@@ -25,13 +25,12 @@ const Login = () => {
 
       <button
         className="btn waves-effect waves-light #1565c0 blue darken-3"
-        type="submit"
-      >
+        type="submit">
       Login <i className="material-icons right">forward</i>
       </button>
-      <Link href="/signup"><a>Dont have an account</a></Link>
+      <Link href="/signup"><a><h5>Dont have an account ? </h5></a></Link>
       
-
+      </form>
     </div>
   );
 };

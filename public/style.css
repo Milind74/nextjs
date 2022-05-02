@@ -18,3 +18,12 @@
   padding: 10px;
 
 }
+input:focus{
+  border-bottom: 1px solid #1565c0 ! important;
+  box-shadow: 0 1px 00 #1565c0 ! important;
+}
+
+textarea:focus{
+  border-bottom: 1px solid #1565c0 ! important;
+  box-shadow: 0 1px 00 #1565c0 ! important;
+}

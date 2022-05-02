@@ -89,7 +89,7 @@ const Create = () => {
         className="responsive-img"
         src={media ? URL.createObjectURL(media) : ""}
       />
-      <textarea
+      <textarea 
         name="description"
         placeholder="Description"
         value={description}

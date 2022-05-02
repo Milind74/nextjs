@@ -9,6 +9,7 @@ const Signup = () => {
   return (
     <div className="container card authcard center-align">
       <h1>sign up</h1>
+    <form>
       <input
         type="text"
         placeholder="Name"
@@ -34,9 +35,9 @@ const Signup = () => {
       >
         Sign up <i className="material-icons right">forward</i>
       </button>
-      <Link href="/login"><a>Already have an account</a></Link>
+      <Link href="/login"><a><h5>Already have an account ?</h5></a></Link>
       
-
+      </form>
     </div>
   );
 };
