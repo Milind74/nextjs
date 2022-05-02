@@ -1,7 +1,44 @@
-const Signup = () => {
-  return (
-    <div>Signup</div>
-  )
-}
+import Link from "next/link";
+import { useState } from "react";
 
-export default Signup
+const Signup = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  return (
+    <div className="container card authcard center-align">
+      <h1>sign up</h1>
+      <input
+        type="text"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="email"
+        value={name}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Password"
+        value={name}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      <button
+        className="btn waves-effect waves-light #1565c0 blue darken-3"
+        type="submit"
+      >
+        Sign up <i className="material-icons right">forward</i>
+      </button>
+      <Link href="/login"><a>Already have an account</a></Link>
+      
+
+    </div>
+  );
+};
+
+export default Signup;

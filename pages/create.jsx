@@ -6,24 +6,27 @@ const Create = () => {
   const [price, setPrice] = useState("");
   const [media, setMedia] = useState("");
   const [description, setDescription] = useState("");
+
   const handleSubmit = async (e)=>{
     e.preventDefault()
     try{
       const mediaUrl =  await imageUpload()
-      console.log("milind",baseUrl);
-    const res =  await fetch(`${baseUrl}/api/products`,{
+      const res =  await fetch(`${baseUrl}/api/products`,{
 
       method:"POST",
       headers:{
         'Content-Type':'application/json'
       },
+      
       body:JSON.stringify({
         name,
         price,
         mediaUrl,
         description
       })
+      
     })
+
     const res2 = await res.json()
       if(res2.error){
         M.toast({html: res2.error,classes:"red"})

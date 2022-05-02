@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 const Product = ({ product }) => {
   const modalRef = useRef(null);
   useEffect(() => {
-      M.Modal.init(modalRef.current);
+      M.Modal.init(modalRef.current, {preventScrolling:false});
     },
     []);
   const router = useRouter();
@@ -41,9 +41,8 @@ const Product = ({ product }) => {
     method:"DELETE"
    })
   await res.json()
-   router.push("/")
-
-  }
+   router.push("/", undefined, {scroll:true})
+   }
 
   return (
     <div className="container center-align">
