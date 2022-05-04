@@ -31,7 +31,7 @@ const Login = () => {
        router.push('/account')
     }
 
-  }
+  } 
   return (
     <div className="container card authcard center-align">
     <h3>LOGIN</h3>

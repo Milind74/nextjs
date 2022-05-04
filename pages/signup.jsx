@@ -10,27 +10,6 @@ const Signup = () => {
   const router=useRouter()
   const userSignup=async (e)=>{
     e.preventDefault()
-    const res=await fetch(`${baseUrl}/api/signup`,{
-      method:"POST",
-      headers:{
-        'Content-Type':'application/json'
-      },
-      body:JSON.stringify({
-        name,email,password
-      })
-    })
-    const res2=await res.json()
-
-    if(res2.error){
-      M.toast({html: res2.error,classes:"red"})
-    }
-    else{
-      M.toast({html:res2.message,classes:"green"})
-      router.push('/login')
-
-    }
-    
-
   }
 
   return (
